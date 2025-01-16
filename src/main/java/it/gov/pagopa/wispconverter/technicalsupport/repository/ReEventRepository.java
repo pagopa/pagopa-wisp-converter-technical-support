@@ -26,8 +26,8 @@ public interface ReEventRepository extends CosmosRepository<ReEventEntity, Strin
     @Query("SELECT DISTINCT VALUE c.sessionId " +
             "FROM c " +
             "WHERE (c.partitionKey >= @dateFrom AND c.partitionKey <= @dateTo) " +
-            "AND c.iuv = @iuv " +
             "AND c.domainId = @organizationId " +
+            "AND c.iuv = @iuv " +
             "AND IS_DEFINED(c.sessionId) AND c.sessionId != null")
     Set<String> findSessionIdByIuvAndDomainId(@Param("dateFrom") String dateFrom,
                                               @Param("dateTo") String dateTo,
@@ -38,8 +38,8 @@ public interface ReEventRepository extends CosmosRepository<ReEventEntity, Strin
     @Query("SELECT DISTINCT VALUE c.sessionId " +
             "FROM c " +
             "WHERE (c.partitionKey >= @dateFrom AND c.partitionKey <= @dateTo) " +
-            "AND c.noticeNumber = @noticeNumber " +
             "AND c.domainId = @organizationId " +
+            "AND c.noticeNumber = @noticeNumber " +
             "AND IS_DEFINED(c.sessionId) AND c.sessionId != null")
     Set<String> findSessionIdByNoticeNumberAndDomainId(@Param("dateFrom") String dateFrom,
                                                        @Param("dateTo") String dateTo,
