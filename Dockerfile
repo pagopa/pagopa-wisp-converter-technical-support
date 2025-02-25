@@ -13,7 +13,7 @@ FROM --platform=linux/amd64 amazoncorretto:17.0.9-alpine3.18@sha256:df48bf2e1832
 COPY --from=buildtime /build/target/*.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
-FROM ghcr.io/pagopa/docker-base-springboot-openjdk17:v2.2.5@sha256:aaca1aa45d6b5201e0ea813ed59a16285729543142b6c7c39ba1e7cd4603c7f6
+FROM ghcr.io/pagopa/docker-base-springboot-openjdk17:v2.2.7@sha256:ea58bccaed00c346eea5ed0ad221d8763feb34c8cce620d86cd4370d7df35125
 
 COPY --chown=spring:spring  --from=builder dependencies/ ./
 COPY --chown=spring:spring  --from=builder snapshot-dependencies/ ./
