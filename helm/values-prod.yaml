@@ -63,7 +63,8 @@ microservice-chart:
           value: "75"
   envConfig:
     WEBSITE_SITE_NAME: 'pagopawispconverterts' # required to show cloud role name in application insights
-    ENV: 'aks-prod'
+    JAVA_OPTS: "-Dotel.instrumentation.runtime-metrics.enabled=false"
+    ENV: 'prod'
     APP_LOGGING_LEVEL: 'INFO'
     DEFAULT_LOGGING_LEVEL: 'WARN'
     CORS_CONFIGURATION: '{"origins": ["*"], "methods": ["*"]}'
