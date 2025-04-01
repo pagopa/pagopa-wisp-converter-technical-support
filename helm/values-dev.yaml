@@ -4,7 +4,7 @@ microservice-chart:
   fullnameOverride: ""
   image:
     repository: ghcr.io/pagopa/pagopa-wisp-converter-technical-support
-    tag: "0.3.2"
+    tag: "0.3.2-9-PIDM-211-change-docker-base"
     pullPolicy: Always
   livenessProbe:
     httpGet:
@@ -63,7 +63,7 @@ microservice-chart:
           value: "75"
   envConfig:
     WEBSITE_SITE_NAME: 'pagopawispconverterts' # required to show cloud role name in application insights
-    ENV: 'aks-dev'
+    ENV: 'dev'
     APP_LOGGING_LEVEL: 'DEBUG'
     DEFAULT_LOGGING_LEVEL: 'INFO'
     CORS_CONFIGURATION: '{"origins": ["*"], "methods": ["*"]}'
