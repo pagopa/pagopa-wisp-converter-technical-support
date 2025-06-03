@@ -6,5 +6,5 @@ version: 0.50.0
 appVersion: 0.3.2-9-PIDM-211-change-docker-base
 dependencies:
   - name: microservice-chart
-    version: 3.0.0
+    version: 7.5.0
     repository: "https://pagopa.github.io/aks-microservice-chart-blueprint"
