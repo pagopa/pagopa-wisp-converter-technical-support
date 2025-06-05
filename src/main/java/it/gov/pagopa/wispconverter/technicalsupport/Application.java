@@ -1,4 +1,4 @@
-package it.gov.pagopa.wispconverter.technicalsupport; // TODO: refactor the package
+package it.gov.pagopa.wispconverter.technicalsupport;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
